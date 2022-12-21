@@ -47,3 +47,22 @@ void Until::MakeBubbleSort(vector<int> &vec){
     }
 }
 
+void Until::MakeInsertionSort(vector<int> &vec){
+    int key, i;
+
+    for(int j = 1; j < vec.size(); j++){
+
+        key = vec[j]; // a chave recebe o valor seguinte
+
+        // na primeira execução pega-se vec[0] e vec[1]
+        i = j-1; // i recebe o valor do seu par de teste -> i = 0 na primeira execução
+
+        while(i >= 0 && vec[i] > key){
+
+            vec[i+1] = vec[i];
+            i = i-1;
+        }
+        
+        vec[i+1] = key;
+    }   
+}

@@ -10,7 +10,7 @@ int main(){
 
     obj.PrintVector(vec);
 
-    obj.MakeBubbleSort(vec);
+    obj.MakeInsertionSort(vec);
     cout << endl << endl;
 
     obj.PrintVector(vec);

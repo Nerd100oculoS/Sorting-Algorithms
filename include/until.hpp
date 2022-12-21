@@ -15,15 +15,16 @@ class Until{
     Until();
     ~Until();
     
+    void RandomNumbers(vector<int> &vec);
+    
     void MakeBubbleSort(vector<int> &vec);
-    void MakeInsertionSort(vector<int> vec);
-    void MakeSelectionSort(vector<int> vec);
-    void MakeQuickSort(vector<int> vec);
-    void MakeMergeSort(vector<int> vec);
-    void MakeHeapSort(vector<int> vec);
+    void MakeInsertionSort(vector<int> &vec);
+    void MakeSelectionSort(vector<int> &vec);
+    void MakeQuickSort(vector<int> &vec);
+    void MakeMergeSort(vector<int> &vec);
+    void MakeHeapSort(vector<int> &vec);
 
     void PrintVector(vector<int> vec);
-    void RandomNumbers(vector<int> &vec);
 };
 
 #endif
