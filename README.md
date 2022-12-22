@@ -38,6 +38,7 @@ O primeiro *loop* é para percorrer o vetor até o penultimo elemento. É o segu
 <div align="center">
 
 ![bubble](https://3.bp.blogspot.com/-pXF1nujk0Tg/UHHRCLUA7WI/AAAAAAAAAXA/l6DiIebY1Rg/s1600/bubblesort.png)
+
 Exemplo do Algoritmo BubbleSort - Imagen retirada de *Nerds Attack*
 </div>
 
@@ -73,6 +74,7 @@ Conforme o pseudocódigo acima, retirado do livro *Algorithms* de *T.H Cormen* p
 <div align="center">
 
 ![insertion](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Insertion-sort-example-300px.gif/220px-Insertion-sort-example-300px.gif)
+
 Exemplo do Algoritmo InsertionSort - Gif retirado da internet.
 </div>
 
