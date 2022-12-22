@@ -12,9 +12,11 @@ int main(){
     while(op != 0){
 
         cout << "--------------------------- MENU ---------------------------\n\n";
-        cout << "[1] - BubbleSort\t[2] - InsertionSort\n\n";
+        cout << "[0] - Para Finalizar!\n";
+        cout << "[1] - BubbleSort\t[2] - InsertionSort\t[3] - SelectionSort\n\n";
         cout << ">>>> ";
         cin >> op;
+        cout << endl << endl;
         
         vec.clear();
         obj.RandomNumbers(vec);
@@ -39,6 +41,12 @@ int main(){
             case 2:
                 cout << "\nInsertion Sort\n\n";
                 obj.MakeInsertionSort(vec);
+                obj.PrintVector(vec);
+            break;
+
+            case 3:
+                cout << "\nSelection Sort\n\n";
+                obj.MakeSelectionSort(vec);
                 obj.PrintVector(vec);
             break;
 
