@@ -3,6 +3,7 @@
 
 #define MAX_VALUE 1000
 #define MIN_VALUE 0
+#define QTD 50
 
 #include<bits/stdc++.h>
 
@@ -14,7 +15,7 @@ class Until{
 
     Until();
     ~Until();
-    
+
     void RandomNumbers(vector<int> &vec);
     
     void MakeBubbleSort(vector<int> &vec);

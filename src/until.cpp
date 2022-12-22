@@ -11,7 +11,7 @@ void Until::RandomNumbers(vector<int> &vec){
     mt19937 gen(rd());
     uniform_int_distribution<> dis(MIN_VALUE,MAX_VALUE);
 
-    while(vec.size() < 10){
+    while(vec.size() < QTD){
 
         vec.push_back(dis(gen));
     }
@@ -54,18 +54,17 @@ void Until::MakeInsertionSort(vector<int> &vec){
     //Pega o primeiro elemento
     for(int j = 1; j < vec.size(); j++){
 
-        key = vec[j]; // a chave recebe o valor seguinte
-
-        // na primeira execução pega-se vec[0] e vec[1]
-        i = j-1; // i recebe o valor do seu par de teste -> i = 0 na primeira execução
+        key = vec[j]; 
+        i = j-1; 
 
         //Ordena de forma crescente
-        while(i >= 0 && vec[i] > key){
+        while(i >= 0 && vec[i] > key){ //Move os valores 
 
             vec[i+1] = vec[i];
             i = i-1;
         }
         
-        vec[i+1] = key; //Insere o valor na sua devida posição já ordenado
+        //Insere o valor na sua devida posição já ordenado até a ultima interção.
+        vec[i+1] = key;
     }   
 }
