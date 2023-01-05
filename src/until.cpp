@@ -140,7 +140,9 @@ int Until::FindPivot(vector<int> &vec, int index1, int index2){
 
     for(int j = index1; j < index2; j++){
 
-        if(vec[j] >= x){
+        // descending -> (>=)
+        // Para odernar de forma decrescente basta mudar a verificação para (>=)
+        if(vec[j] <= x){
 
             i += 1;
             swap(vec[i],vec[j]);
