@@ -121,3 +121,35 @@ void Until::MakeSelectionSort(vector<int> &vec){
         vec[menor_idx] = aux; // o elemento selecionado no primeiro loop troca de posicao com o de menor valor
     }
 }
+
+void Until::MakeQuickSort(vector<int> &vec,  int index1, int index2){
+
+    if(index1 < index2){
+
+        int index_pivot = FindPivot(vec,index1,index2); // acha o indice do elemento que será o pivot
+
+        MakeQuickSort(vec,index1,index_pivot-1); // ordena os elementos da esquerda (menores)
+        MakeQuickSort(vec,index_pivot+1,index2); // ordena os elementos da direita (maiores)
+    }
+}
+
+int Until::FindPivot(vector<int> &vec, int index1, int index2){
+
+    int x = vec[index2]; // recebe ultimo elemento
+    int i = index1 - 1; // indice i que comeca antes do vetor
+
+    for(int j = index1; j < index2; j++){
+
+        if(vec[j] >= x){
+
+            i += 1;
+            swap(vec[i],vec[j]);
+        }
+    }
+
+    swap(vec[i+1],vec[index2]);
+
+    return i+1;
+}
+
+
