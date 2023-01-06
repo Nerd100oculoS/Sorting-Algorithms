@@ -122,8 +122,8 @@ Exemplo do Algoritmo SelectionSort - Gif retirado da internet.
 
 ### 4 - QuickSort
 
-A partir deste tópico, tem-se os algoritmos de ordenação mais complexos, contúdo, mais rápidos. O QuickSort é um destes algoritmos, ele utiliza a estratégia de **Divisão e Conquita (DC)** - *Capítulo 4, Cormen*[$^{1}$](#8---referências). Além disso, conforme a literatura, é implementado utilizando recursão.
-O algoritmo QuickSort implementado neste respositório está de acordo com a literatura de referência - *Capítulo 7, Cormen*[$^{1}$](#8---referências). Os pseudocódigos abaixo apresentam o funcionamento interno do algoritmo.
+A partir deste tópico, tem-se os algoritmos de ordenação mais complexos, contúdo, mais rápidos. O QuickSort é um destes algoritmos, ele utiliza a estratégia de **Divisão e Conquita (DC)** - *Capítulo 4, Cormen*. Além disso, conforme a literatura, é implementado utilizando recursão.
+O algoritmo QuickSort implementado neste respositório está de acordo com a literatura de referência - *Capítulo 7, Cormen*. Os pseudocódigos abaixo apresentam o funcionamento interno do algoritmo.
 
 ````
 Função ProcuraPivô(vec, p, r){
