@@ -122,6 +122,13 @@ void Until::MakeSelectionSort(vector<int> &vec){
     }
 }
 
+/**
+ * @brief Faz a ordenação por QuickSort
+ * 
+ * @param vec vetor a ser ordenado
+ * @param index1 indice do elemento inicial do vetor(inicialmente)
+ * @param index2 indice referente ao ultimo elemento do vetor(inicialmente)
+ */
 void Until::MakeQuickSort(vector<int> &vec,  int index1, int index2){
 
     if(index1 < index2){
@@ -133,6 +140,14 @@ void Until::MakeQuickSort(vector<int> &vec,  int index1, int index2){
     }
 }
 
+/**
+ * @brief Encontra um pivot e reorganiza os elementos
+ * 
+ * @param vec vetor a ser reorganizado e ordenado
+ * @param index1 indice do elemento inicial do vetor(inicialmente)
+ * @param index2 indice referente ao ultimo elemento do vetor(inicialmente)
+ * @return o indice do elemento que será o pivot
+ */
 int Until::FindPivot(vector<int> &vec, int index1, int index2){
 
     int x = vec[index2]; // recebe ultimo elemento
