@@ -21,7 +21,7 @@ Procedimento BUBBLE_SORT(vetor vec){
     Para i até n.size() - 1 faça:
         Para j até n.size() - 1 faça:
 
-            Se vec[j] > vec[j+1]
+            Se vec[j] > vec[j+1]:
                 
                 //Faz Swap
                 aux = vec[j]
@@ -50,7 +50,7 @@ Exemplo do Algoritmo BubbleSort - Imagen retirada de *Nerds Attack*
 O Algoritmo de ordenação por Inserção é outro algoritmo simples. Sua principal característica está em mover os valores para inserir o valor na posição desejada, com o intuito de ordenar a cada interação, seja de forma crescente ou decrescente. O pseudocódigo abaixo deixa evidente como o InsertionSort funciona.
 
 ````
-Procedimento InsertionSor(vetor vec){
+Procedimento InsertionSort(vetor vec){
 
     Para j = 1 até vec.size() faça:
 
@@ -94,7 +94,7 @@ Procedimento SelectionSort(vetor vec){
         
         Para j até vec.size() faça:
 
-            Se vec[j] < vec[menor_idx]
+            Se vec[j] < vec[menor_idx]:
 
                 menor_idx = j // no indice j se encontra o menor elemento
 
@@ -122,6 +122,64 @@ Exemplo do Algoritmo SelectionSort - Gif retirado da internet.
 
 ### 4 - QuickSort
 
+A partir deste tópico, tem-se os algoritmos de ordenação mais complexos, contúdo, mais rápidos. O QuickSort é um destes algoritmos, ele utiliza a estratégia de **Divisão e Conquita (DC)** - *Capítulo 4, Cormen*[$^{1}$](#8---referências). Além disso, conforme a literatura, é implementado utilizando recursão.
+O algoritmo QuickSort implementado neste respositório está de acordo com a literatura de referência - *Capítulo 7, Cormen*[$^{1}$](#8---referências). Os pseudocódigos abaixo apresentam o funcionamento interno do algoritmo.
+
+````
+Função ProcuraPivô(vec, p, r){
+    
+    pivô = vec[r] // recebe o ultimo elemento do vetor
+    i = p - 1
+
+    Para j = p até j < r faça:
+        
+        // Para ordenar de forma decrescente, basta alterar para >=
+        Se vec[j] <= pivô:
+
+            i = i + 1
+            Troca(vec[i],vec[j]) // Faz Swap
+
+        Fim-Se
+    Fim-Para
+
+    Troca(vec[i+1],vec[r])
+
+    Retorna i+1
+}
+````
+
+````
+Procedimento QuickSort(vec, p, r){
+
+    Se p < r:
+
+        index_pivô = ProcuraPivô(vec, p, r)
+
+        //Faz a recursão
+        QuickSort(vec, p, index_pivô - 1)
+        QuickSort(vec, index_pivô + 1, r)
+
+    Fim-Se
+}
+````
+
+No primeiro pseudocódigo, o procedimento para encontrar o pivô, faz um rearranjo do vetor com o intuito de separar a esquerda, todos os elementos que forem menor ou igual ao o pivô e a direita os elementos maiores que o pivô. Ambos os arranjos vão crescendo conforme o vetor é percorrido durante o procedimento. Já o segundo pseudocódigo verifica as posicões, que inicialmente serão `p = 0` e `r = vec.size() - 1` - índice do ultimo elemento. Encontra o pivô de forma a organizar o vetor e depois faz a chamada dos métodos recursivos para os dois sub-vetores, da esquerda e da direita.
+
+<div align="center">
+
+![QuickSort](https://upload.wikimedia.org/wikipedia/commons/a/af/Quicksort-diagram.svg)
+
+Exemplo de ordenação pelo algoritmo QuickSort - Imagem retirada da internet
+</div>
+
+Por meio da imagem é possível ver que, primeiro o vetor foi reorganizado e o pivô utilizado foi o número 4 - índice 3. Depois disso é chamado o método QuickSort para os *sub-vetores*. E assim o processo se repete recursivamente até a ordenação ser completada.
+
+> De forma simplificada, a complexidade do QuickSort para o algoritmo implementado, no melhor caso e no caso médio é quando a cada execução, o vetor é subdividido em partes de tamanhos iguais ou quase iguais, tendo assim, complexidade $\mathcal{O}(n\log n)$. No pior caso, quando as divisões geram sub-vetores de tamanhos diferentes, proximos de `n - 1` - sendo n o tamanho do vetor naquele instante -, tem-se a complexidade próxima ou igual de $\mathcal{O}(n^2)$. O pior caso ocorre quando o pivô escolhido é o menor ou o maior elemento do vetor a ser ordenado.
+
+> Como o QuickSort é um algoritmo mais complexo que os demais vistos neste repositório. Há na literatura de referência [1](#8---referências), nas secções 7.2 a 7.4, a análise da complexidade de cada caso do QuickSort.
+
+> Existem outras formas de implementar o QuickSort, as mais comuns são: Encontrar o pivô de forma aleatória e utilizar múltiplos pivôres (multipivô).
+
 ### 5 - MergeSort
 
 ### 6 - HeapSort
@@ -130,9 +188,9 @@ Exemplo do Algoritmo SelectionSort - Gif retirado da internet.
 
 ### 8 - Referências
 
-* Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. **Algoritmos:  Teoria e Prática**. 3a edição. Elsevier, 2012. ISBN 9788535236996
-* Nivio Ziviani. **Projetos de Algoritmos: com Implementaão em Pascal e C**. 3a edição. Cengage, 2017. ISBN 978-8522110506
-* Aditya Y. Bhargava. **Entendendo Algoritmos: Um guia ilustrado para programadores e outros curiosos**. Novatec, 2017. ISBN 978-85-7522-563-9
+* [1] Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. **Algoritmos:  Teoria e Prática**. 3a edição. Elsevier, 2012. ISBN 9788535236996
+* [2] Nivio Ziviani. **Projetos de Algoritmos: com Implementaão em Pascal e C**. 3a edição. Cengage, 2017. ISBN 978-8522110506
+* [3] Aditya Y. Bhargava. **Entendendo Algoritmos: Um guia ilustrado para programadores e outros curiosos**. Novatec, 2017. ISBN 978-85-7522-563-9
 
 ## Compilação e Execução
 Utilize os comandos conforme suas funcões para compilar e executar.
