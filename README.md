@@ -3,10 +3,10 @@
 <div align="center">
 
 # Algoritmos de Ordenação
-#### Algorithms of Ordination
+#### Sorting Algorithms
 ![vscode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![c++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![macOS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
 
-[BubbleSort](#1---bubblesort) | [InsertionSort](#2---insertionsort) | [SelectionSort](#3---selectionsort) | [QuickSort](#4---quicksort) | [MergeSort](#5---mergesort) | [HeapSort](#6---heapsort) | [Conclusão](#7---conclusão) | [Referências](#8---referências) | [Compilação e Execução](#compilação-e-execução)
+[BubbleSort](#1---bubblesort) | [InsertionSort](#2---insertionsort) | [SelectionSort](#3---selectionsort) | [QuickSort](#4---quicksort) | [Referências](#8---referências) | [Compilação e Execução](#compilação-e-execução)
 
 </div>
 
@@ -39,7 +39,7 @@ O primeiro *loop* é para percorrer o vetor até o penultimo elemento. É o segu
 
 ![bubble](https://3.bp.blogspot.com/-pXF1nujk0Tg/UHHRCLUA7WI/AAAAAAAAAXA/l6DiIebY1Rg/s1600/bubblesort.png)
 
-Exemplo do Algoritmo BubbleSort - Imagen retirada de *Nerds Attack*
+Exemplo do Algoritmo BubbleSort - Imagem retirada do blog *Nerds-Attack*
 </div>
 
 > BubbleSort é um algoritmo de ordenação lento, com custo $\mathcal{O}(n^2)$ para seu pior caso e caso médio.
@@ -180,17 +180,18 @@ Por meio da imagem é possível ver que, primeiro o vetor foi reorganizado e o p
 
 > Existem outras formas de implementar o QuickSort, as mais comuns são: Encontrar o pivô de forma aleatória e utilizar múltiplos pivôres (multipivô).
 
-### 5 - MergeSort
+### 5 - Considerações Finais
 
-### 6 - HeapSort
+Foram apresentados quatro algoritmos de ordenação. Os três primeiros são simples de serem compreendidos e implmentados, entretanto são algoritmos lentos para um grande número de entradas. O Último algoritmo apresentado, se baseia na estratégia de **Divisão e Conquista**. No melhor caso e no caso médio, o Quicksort é mais rápido que os demais algoritmos, entretanto, se aconteçer de cair no pior caso, será tão lento quanto os demais.
 
-### 7 - Conclusão
+**Mergesort** e **Heapsort** são dois algoritmos de ordenação que têm a complexidade logarítimica. Tanto para o algoritmo [Quicksort](#4---quicksort) quanto para o Mergesort e o Heapsort, seria necessário um único Readme para cada um, para explicar a análise de seus casos - O Quicksort foi apresentado de forma muito simplificada neste reposiório, por isso foi devidamente referenciado para um melhor estudo posteriormente. 
 
-### 8 - Referências
+Dessa forma, caso você leitor queira abranger mais os estudos de algoritmos de ordenação, para o Heapsort, a literatura principal de referência, no *Capítulo 6, Cormen*, abrange toda a teoria e apresenta o pseudocódigo. Para o Mergesort, acredito que seja melhor olhar neste [link](https://joaoarthurbm.github.io/eda/posts/merge-sort/).
+
+### 6 - Referências
 
 * [1] Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. **Algoritmos:  Teoria e Prática**. 3a edição. Elsevier, 2012. ISBN 9788535236996
 * [2] Nivio Ziviani. **Projetos de Algoritmos: com Implementaão em Pascal e C**. 3a edição. Cengage, 2017. ISBN 978-8522110506
-* [3] Aditya Y. Bhargava. **Entendendo Algoritmos: Um guia ilustrado para programadores e outros curiosos**. Novatec, 2017. ISBN 978-85-7522-563-9
 
 ## Compilação e Execução
 Utilize os comandos conforme suas funcões para compilar e executar.
@@ -202,4 +203,6 @@ Utilize os comandos conforme suas funcões para compilar e executar.
 |  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
 </div>
 
-
+<div style="color: red">
+*Contribuições são bem-vindas! 
+</div>
