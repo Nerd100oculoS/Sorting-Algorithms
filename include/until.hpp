@@ -17,6 +17,7 @@ class Until{
     ~Until();
 
     void RandomNumbers(vector<int> &vec);
+    void PrintVector(vector<int> vec);
     
     void MakeBubbleSort(vector<int> &vec);
     void MakeInsertionSort(vector<int> &vec);
@@ -24,11 +25,6 @@ class Until{
     
     void MakeQuickSort(vector<int> &vec, int index1, int index2);
     int FindPivot(vector<int> &vec, int index1, int index2);
-    
-    void MakeMergeSort(vector<int> &vec);
-    void MakeHeapSort(vector<int> &vec);
-
-    void PrintVector(vector<int> vec);
 };
 
 #endif
